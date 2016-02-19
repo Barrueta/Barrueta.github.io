@@ -20,7 +20,7 @@ var far=1000;
 var camara=new THREE.PerspectiveCamera(fov,aspect,near,far);
 camara.position.z=5;
 var renderer=new THREE.WebGLRenderer();
-renderer.Setsize(window.innerWidth,window.innerHeight);
+renderer.setSize(window.innerWidth,window.innerHeight);
 document.body.appendChild(renderer.domElement);
 var forma=new THREE.BoxGeometry(1,1,1);
 var material=new THREE.MeshBasicMaterial({color:0x00ff00});
