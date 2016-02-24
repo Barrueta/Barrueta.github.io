@@ -24,7 +24,7 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 document.body.appendChild(renderer.domElement);
 </script>
 <script>
-var geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
+var geometry = new THREE.TorusGeometry( 2, 0.5, 16, 100 );
 var material = new THREE.MeshNormalMaterial();
 var torus = new THREE.Mesh( geometry, material );
 escena.add( torus );
