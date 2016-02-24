@@ -22,7 +22,7 @@ camara.position.z=5;
 var renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight);
 document.body.appendChild(renderer.domElement);
-var forma=new THREE.CylinderGeometry(1,1,5);
+var forma=new THREE.CylinderGeometry(1,1,10);
 var material=new THREE.MeshNormalMaterial({color:0x00ff00});
 var cilindro=new THREE.Mesh(forma,material);
 escena.add(cilindro);
