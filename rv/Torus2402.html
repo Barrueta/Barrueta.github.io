@@ -22,6 +22,8 @@ camara.position.z=5;
 var renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight);
 document.body.appendChild(renderer.domElement);
+</script>
+<script>
 var geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
 var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 var torus = new THREE.Mesh( geometry, material );
@@ -33,6 +35,5 @@ function render()
 }
 render();
 </script>
-
 </body>
 </html>
