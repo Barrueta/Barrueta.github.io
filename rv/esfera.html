@@ -27,15 +27,5 @@ var material=new THREE.MeshNormalMaterial({color:0x00ff00});
 var esfera=new THREE.Mesh(forma,material);
 escena.add(esfera);
 </script>
-<script>
-function render()
-{
-requestAnimationFrame(render);
-cubo.rotation.x +=0.1;
-  cubo.rotation.y +=0.1;
-renderer.render(escena,camara);
-}
-render();
-</script>
 </body>
 </html>
