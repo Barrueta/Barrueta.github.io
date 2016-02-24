@@ -27,7 +27,7 @@ document.body.appendChild(renderer.domElement);
 var geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
 var material = new THREE.MeshNormalMaterial();
 var torus = new THREE.Mesh( geometry, material );
-scene.add( torus );
+escena.add( torus );
 function render()
 {
   requestAnimationFrame(render);
