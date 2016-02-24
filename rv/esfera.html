@@ -26,6 +26,13 @@ var forma=new THREE.SphereGeometry(1);
 var material=new THREE.MeshNormalMaterial({color:0x00ff00});
 var esfera=new THREE.Mesh(forma,material);
 escena.add(esfera);
+function render()
+{
+  requestAnimationFrame(render);
+  renderer.render(escena,camara);
+}
+render();
 </script>
+
 </body>
 </html>
