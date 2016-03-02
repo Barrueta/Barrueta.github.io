@@ -29,7 +29,7 @@ escena=new THREE.Scene();
 escena.add(malla);
 
 //se inicializa la camara y el renderer
-camara=new THREE.Perspectivecamera();
+camara=new THREE.PerspectiveCamera();
 camara.position.z=10;
 
 renderer=new THREE.WebGLRenderer();
