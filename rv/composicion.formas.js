@@ -5,15 +5,15 @@ var esferaForma=new THREE.SphereGeometry(1);
 var cilindroForma=new THREE.CylinderGeometry(0.5,0.5,4);
 
 //para generar una forma combinada se requiere de las mallas para poder desplazar las formas en el espacio virtual
-var esfera1=new.THREE.Mesh(esferaForma);
-var esfera2=new.THREE.Mesh(esferaForma);
-var cilindro=new.THREE.Mesh(cilindroForma);
+var esfera1=new THREE.Mesh(esferaForma);
+var esfera2=new THREE.Mesh(esferaForma);
+var cilindro=new THREE.Mesh(cilindroForma);
 
 //se desplazan las mallas 
 esfera1.position.y=2;
 esfera2.position.y=-2;
 
-var forma=new.THREE.Geometry();
+var forma=new THREE.Geometry();
 
 //se utiliza el paquete GeoemtryUtils para conjuntar las formas
 
@@ -22,17 +22,17 @@ THREE.GeometryUtils.merge(forma,esfera2);
 THREE.GeometryUtils.merge(forma,cilindro);
 
 //se genera la malla a partir de la forma
-malla=new.THREE.Mesh(forma);
+malla=new THREE.Mesh(forma);
 
 //se inicializa la escena y se agrega la malla a esta
-escena=new.THREE.Scene();
+escena=new THREE.Scene();
 escena.add(malla);
 
 //se inicializa la camara y el renderer
-camara=new.THREE.Perspectivecamera();
+camara=new THREE.Perspectivecamera();
 camara.position.z=10;
 
-renderer=new.THREE.WebGLRenderer();
+renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHight*.95);
 document.body.appendChild(renderer.domElement);
 }
