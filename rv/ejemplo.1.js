@@ -5,8 +5,8 @@ this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1));
 this.pierna.position.y=-2.5;
 this.pie.position.y=-4.5;
 this.pie.position.x=1;
-this.add(pie);
-this.add(pierna)
+this.add(this.pie);
+this.add(this.pierna)
 }
 Pierna.prototype=new THREE.Object3D();
 
