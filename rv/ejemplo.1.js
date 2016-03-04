@@ -1,5 +1,5 @@
 function Pierna(){
-THREE.Object.3D.call(this);
+THREE.Object3D.call(this);
 this.pierna=new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
 this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1));
 this.pierna.position.y=-2.5;
