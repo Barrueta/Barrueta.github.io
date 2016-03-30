@@ -1,6 +1,6 @@
 function setup(){
-var cubo=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
-var cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
+cubo=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
+cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 cubo.position.x=0.7;
 cubo2.position.x=-0.7;
 camara=new THREE.PerspectiveCamera();
