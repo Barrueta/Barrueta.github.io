@@ -18,7 +18,7 @@ step=0.01;
 }
 function loop(){
 var intersects=raycaster.intersectObjects(escena.children);
-if(intersects.legth>0) step=-step;
+if(intersects.length>0) step=-step;
 cubo.rotation.x +=step;
 cubo.rotation.y +=step;
 cubo2.rotation.x +=step;
