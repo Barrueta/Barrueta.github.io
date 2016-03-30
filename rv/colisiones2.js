@@ -9,6 +9,7 @@ camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
 raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
+escena=new THREE.Scene();
 escena.add(cubo);
 escena.add(cubo2);
 escena.add(camara);
