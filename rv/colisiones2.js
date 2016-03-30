@@ -3,8 +3,8 @@ function setup(){
 cubo=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 pelota=new THREE.Mesh(new THREE.SphereGeometry(0.5), new THREE.MeshNormalMaterial());
-cubo.position.x=0.7;
-cubo2.position.x=-0.7;
+cubo.position.x=7;
+cubo2.position.x=-7;
 camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
 raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
