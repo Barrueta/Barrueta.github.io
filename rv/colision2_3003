@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<title>Ejemplo:Colisiones2</title>
+<style>
+body {text-align:center;}
+</style>
+</head>
+<body>
+<script src="http://mrdoob.github.com/three.js/build/three.min.js">
+</script>
+<script src="colisiones2.js">
+</script>
+</body>
+</html>
