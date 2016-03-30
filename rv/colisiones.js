@@ -13,7 +13,7 @@ escena.add(cubo2);
 escena.add(camara);
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
-document.body.appendChild(renderer.domelement);
+document.body.appendChild(renderer.domElement);
 step=0.01;
 }
 function loop(){
