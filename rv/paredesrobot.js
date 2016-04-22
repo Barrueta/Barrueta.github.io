@@ -1,4 +1,6 @@
 function Sensor(position,direction){
+ //this.luz=new THREE.SpotLight(0xffffff);
+ //this.luz.position
  THREE.Raycaster.call(this,position,direction);
  this.colision=false;
 }
@@ -37,7 +39,6 @@ function BB8(x=0, y=0){
  this.add(this.cabezabb8);
 
  this.sensor=new Sensor();
- //this.sensor2=new Sensor();
  this.actuator=new Array();
  
  this.cuerpo.rotation.x=Math.PI/2;
@@ -49,6 +50,7 @@ function BB8(x=0, y=0){
  this.cabezabb8.scale.x=0.5;
  this.cabezabb8.scale.y=0.5;
  this.cabezabb8.scale.z=0.5;
+
 }
 BB8.prototype=new Agent();
 
@@ -70,31 +72,23 @@ Environment.prototype.setMap=function(map){
     this.add(new BB8(j-offset,-(i-offset)));
   }
  }
+ //this.add(new Floor(-0.5,-1.5,0.5));
 }	
 
 BB8.prototype.sense=function(environment){
  this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
- //this.sensor2.set(this.position, new THREE.Vector3(Math.sin(this.rotation.z),Math.cos(this.rotation.z),0));
+ this.iluminacionr = new THREE.SpotLight(0xffffff);
+ this.iluminacionr.position.x=Math.cos(this.rotation.z);
+ this.iluminacionr.position.y=Math.sin(this.rotation.z);
  var obstaculo = this.sensor.intersectObjects(environment.children,true);
- //var obstaculo2 = this.sensor2.intersectObjects(environment.children,true);
  if ((obstaculo.length>0&&(obstaculo[0].distance<=1)))
   this.sensor.colision=true;
  else
   this.sensor.colision=false;
- /*if((obstaculo2.length>0&&(obstaculo2[0].distance<=1)))
-  this.sensor2.colision=true;
- else
-  this.sensor2.colision=false;*/
 }
 
 BB8.prototype.plan = function(environment){
  this.actuator.commands=[];
- /*if(this.sensor.colision==false && this.sensor2.colision==true)
-  this.actuator.commands.push('Derecho');
- else if(this.sensor.colision==true && this.sensor2.colision==true)
-   this.actuator.commands.push('RotarDerecha');
- else
-   this.actuator.commands.push('RotarIzquierda');*/
   if(this.sensor.colision==true)
    this.actuator.commands.push('RotarIzquierda');
   else
@@ -138,7 +132,7 @@ BB8.prototype.operations.RotarIzquierda = function(robot,angulo){
 function setup(){
  var mapa = new Array();
   mapa[0] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
-  mapa[1] = "x   r                      x";
+  mapa[1] = "x                          x";
   mapa[2] = "x                          x";
   mapa[3] = "x                          x";
   mapa[4] = "x                          x";
@@ -162,25 +156,35 @@ function setup(){
  mapa[22] = "x                          x";
  mapa[23] = "x                          x";
  mapa[24] = "xxxxxxxxxxxxx           xxxx";
- mapa[25] = "x     r                    x";
- mapa[26] = "x                          x";
+ mapa[25] = "x                          x";
+ mapa[26] = "x     r                    x";
  mapa[27] = "x                          x";
  mapa[28] = "x                          x";
  mapa[29] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
  entorno=new Environment();
  entorno.setMap(mapa);
- luzPuntual = new THREE.PointLight(0xffffff);
- luzPuntual.position.x=0;  
- luzPuntual.position.y=10;
- luzPuntual.position.z=30;
+ var floor=new THREE.Mesh(new THREE.BoxGeometry(28,30,0.1), new THREE.MeshLambertMaterial({color:0x00ff00}));
+ floor.position.z=-0.5;
+ floor.position.x=-1.5;
+ floor.position.y=0.5;
+ iluminacion = new THREE.PointLight(0xffffff);
+ iluminacion.position.z=20;
+ //iluminacion.position.y=10;
+
  camara=new THREE.PerspectiveCamera();
- camara.position.z=50;
+ camara.position.z=40;
  renderer = new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*0.95, window.innerHeight*0.95);
  document.body.appendChild(renderer.domElement);
  entorno.add(camara);
- entorno.add(luzPuntual);
+ entorno.add(iluminacion);
+ entorno.add(floor);
+
+ renderer.shadowMap.enabled=true;
+ //malla.castShadow=true;
+ floor.receiveShadow=true;
+ iluminacion.castShadow=true;
 }
 
 function loop(){
@@ -191,7 +195,7 @@ function loop(){
  renderer.render(entorno,camara);
 }
 
-var entorno,luzPuntual,robot,step,angulo,camara,renderer;
+var entorno,iluminacion,robot,step,angulo,camara,renderer;
 
 setup();
 loop();
