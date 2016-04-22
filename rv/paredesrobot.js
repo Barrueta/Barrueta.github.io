@@ -184,7 +184,7 @@ function setup(){
  renderer.shadowMap.enabled=true;
  //malla.castShadow=true;
  floor.receiveShadow=true;
- iluminacion.castShadow=true;
+ //iluminacion.castShadow=true;
 }
 
 function loop(){
