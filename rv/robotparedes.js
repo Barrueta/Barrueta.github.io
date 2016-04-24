@@ -180,7 +180,7 @@ function setup(){
  renderer.setSize(window.innerHeight*0.95, window.innerHeight*0.95);
  document.body.appendChild(renderer.domElement);
  entorno.add(camara);
- //entorno.add(iluminacion);
+ entorno.add(iluminacion);
  entorno.add(floor);
 
  renderer.shadowMap.enabled=true;
