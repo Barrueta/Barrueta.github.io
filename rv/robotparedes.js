@@ -35,7 +35,7 @@ function BB8(x=0, y=0){
  this.cuerpo=new THREE.Mesh(new THREE.SphereGeometry(2,100,100), new THREE.MeshPhongMaterial ({map:textura}));
  this.cabezabb8 = new BB8Cabeza();
  this.cuerpo.rotation.z=-0.25;
- this.iluminacionr = new THREE.SpotLight(0xffffff,1,84,0.24);
+ this.iluminacionr = new THREE.SpotLight(0xffffff);
  this.iluminacionr.position.x=1;
  this.iluminacionr.position.y=1;
  this.add(this.iluminacionr);  
