@@ -60,7 +60,7 @@ function BB8(x=0, y=0){
 BB8.prototype=new Agent();
 
 function Wall(size,x=0,y=0){
- THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size), new THREE.MeshPhongMaterial()); 
+ THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size), new THREE.LambertPhongMaterial()); 
  this.size=size;
  this.position.x=x;
  this.position.y=y;
