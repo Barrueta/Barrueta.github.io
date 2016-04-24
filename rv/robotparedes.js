@@ -1,6 +1,5 @@
 function Sensor(position,direction){
- spotLight = new THREE.SpotLight(0xffffff);
- spotLight.position = Sensor.position;
+
  THREE.Raycaster.call(this,position,direction);
  this.colision=false;
 }
@@ -175,6 +174,8 @@ function setup(){
  iluminacion = new THREE.PointLight(0xffffff);
  iluminacion.position.z=20;
  iluminacion.position.y=10;
+ spotLight = new THREE.SpotLight(0xffffff);
+ spotLight.position = Sensor.position;
 
  camara=new THREE.PerspectiveCamera();
  camara.position.z=40;
@@ -184,6 +185,7 @@ function setup(){
  entorno.add(camara);
  entorno.add(iluminacion);
  entorno.add(floor);
+ entorno.add(spotLight);
 
  renderer.shadowMap.enabled=true;
  //malla.castShadow=true;
@@ -199,7 +201,7 @@ function loop(){
  renderer.render(entorno,camara);
 }
 
-var entorno,iluminacion,robot,step,angulo,camara,renderer;
+var entorno,iluminacion,robot,step,angulo,camara,renderer,spotLight;
 
 setup();
 loop();
