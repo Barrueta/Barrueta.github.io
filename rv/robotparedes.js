@@ -36,8 +36,6 @@ function BB8(x=0, y=0){
  this.cabezabb8 = new BB8Cabeza();
  this.cuerpo.rotation.z=-0.25;
  this.iluminacionr = new THREE.SpotLight(0xffffff);
- //this.iluminacionr.position.x=-Math.cos(this.rotation.z);
- //this.iluminacionr.position.y=Math.sin(this.rotation.z);
  this.add(this.iluminacionr);  
  this.add(this.cuerpo);
  this.add(this.cabezabb8);
@@ -83,7 +81,7 @@ Environment.prototype.setMap=function(map){
 BB8.prototype.sense=function(environment){
  this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
  //this.iluminacionr = new THREE.SpotLight(0xffffff);
- this.iluminacionr.position= this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));;
+ this.iluminacionr.position.x= Math.cos(this.rotation.z);
  //this.iluminacionr.position.y=Math.sin(this.rotation.z);
  
 
