@@ -35,7 +35,7 @@ function BB8(x=0, y=0){
  this.cuerpo=new THREE.Mesh(new THREE.SphereGeometry(2,100,100), new THREE.MeshPhongMaterial ({map:textura}));
  this.cabezabb8 = new BB8Cabeza();
  this.cuerpo.rotation.z=-0.25;
- this.iluminacionr = new THREE.SpotLight(0xffffff,6.4,828,0.07,0,0);
+// this.iluminacionr = new THREE.SpotLight(0xffffff,6.4,828,0.07,0,0);
  //this.iluminacionr.position.set(0,0,0);//Math.cos(this.rotation.z),0);
  this.add(this.iluminacionr);  
  this.add(this.cuerpo);
@@ -80,7 +80,11 @@ Environment.prototype.setMap=function(map){
 }	
 
 BB8.prototype.sense=function(environment){
+ 
  this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
+ spotLight = new THREE.SpotLight(0xF8D898);
+ spotLight.position.x = sensor.position.x;
+ spotLight.position.y = sensor.position.y;
  
  var obstaculo = this.sensor.intersectObjects(environment.children,true);
  if ((obstaculo.length>0&&(obstaculo[0].distance<=1)))
