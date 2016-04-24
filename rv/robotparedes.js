@@ -174,9 +174,9 @@ function setup(){
  iluminacion = new THREE.PointLight(0xffffff);
  iluminacion.position.z=20;
  iluminacion.position.y=10;
- spotLight = new THREE.SpotLight(0xffffff);
- spotLight.position.x = Sensor.position;
- spotLight.direction = Sensor.direction;
+ //spotLight = new THREE.SpotLight(0xffffff);
+ //spotLight.position.x = Sensor.position;
+ //spotLight.direction = Sensor.direction;
  camara=new THREE.PerspectiveCamera();
  camara.position.z=40;
  renderer = new THREE.WebGLRenderer();
@@ -185,7 +185,7 @@ function setup(){
  entorno.add(camara);
  entorno.add(iluminacion);
  entorno.add(floor);
- entorno.add(spotLight);
+ //entorno.add(spotLight);
 
  renderer.shadowMap.enabled=true;
  //malla.castShadow=true;
@@ -201,7 +201,7 @@ function loop(){
  renderer.render(entorno,camara);
 }
 
-var entorno,iluminacion,robot,step,angulo,camara,renderer,spotLight;
+var entorno,iluminacion,robot,step,angulo,camara,renderer;
 
 setup();
 loop();
