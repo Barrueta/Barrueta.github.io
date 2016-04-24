@@ -23,7 +23,7 @@ function BB8Cabeza(){
  this.add(this.cabeza);
  this.add(this.antena1);
  this.add(this.antena2);
- this.add(this.cuello);
+ this.add(this.cuello); 
 }
 
 BB8Cabeza.prototype=new THREE.Object3D();
