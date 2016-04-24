@@ -23,7 +23,11 @@ function BB8Cabeza(){
  this.add(this.cabeza);
  this.add(this.antena1);
  this.add(this.antena2);
- this.add(this.cuello); 
+ this.add(this.cuello);  
+ this.iluminacionr = new THREE.SpotLight(0xffffff);
+ this.add(this.iluminacionr);
+
+ 
 }
 
 BB8Cabeza.prototype=new THREE.Object3D();
@@ -35,9 +39,8 @@ function BB8(x=0, y=0){
  this.cuerpo=new THREE.Mesh(new THREE.SphereGeometry(2,100,100), new THREE.MeshPhongMaterial ({map:textura}));
  this.cabezabb8 = new BB8Cabeza();
  this.cuerpo.rotation.z=-0.25;
- this.iluminacionr = new THREE.SpotLight(0xffffff);
  //this.iluminacionr.target.position.set(0,,2);
- this.add(this.iluminacionr);  
+  
  this.add(this.cuerpo);
  this.add(this.cabezabb8);
 
