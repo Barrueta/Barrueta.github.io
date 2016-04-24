@@ -27,7 +27,7 @@ function BB8Cabeza(){
  this.iluminacionr = new THREE.SpotLight(0xffffff);
  this.add(this.iluminacionr);
  this.iluminacionr.position.x=Math.PI/2;
- this.iluminacionr.position.y=Math.PI+0.5;
+ this.iluminacionr.position.y=0;
  
 }
 
