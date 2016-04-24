@@ -1,7 +1,6 @@
 function Sensor(position,direction){
  THREE.Raycaster.call(this,position,direction);
- spotLight = new THREE.SpotLight(0xffffff);
- spotLight.call(this,position,direction);
+ 
  
  this.colision=false;
 }
@@ -77,7 +76,6 @@ Environment.prototype.setMap=function(map){
     this.add(new BB8(j-offset,-(i-offset)));
   }
  }
- //this.add(new Floor(-0.5,-1.5,0.5));
 }	
 
 BB8.prototype.sense=function(environment){
