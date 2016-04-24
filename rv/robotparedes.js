@@ -175,8 +175,8 @@ function setup(){
  iluminacion.position.z=20;
  iluminacion.position.y=10;
  spotLight = new THREE.SpotLight(0xffffff);
- spotLight.position.x = Sensor.position.x;
- spotLight.position.y = Sensor.position.y;
+ spotLight.position.x = Sensor.position.y;
+ spotLight.position.y = Sensor.position.z;
  camara=new THREE.PerspectiveCamera();
  camara.position.z=40;
  renderer = new THREE.WebGLRenderer();
