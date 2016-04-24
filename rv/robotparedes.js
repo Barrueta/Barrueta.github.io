@@ -36,7 +36,7 @@ function BB8(x=0, y=0){
  this.cabezabb8 = new BB8Cabeza();
  this.cuerpo.rotation.z=-0.25;
  this.iluminacionr = new THREE.SpotLight(0xffffff);
- this.iluminacionr.target.position.set(0,4,2);
+ //this.iluminacionr.target.position.set(0,,2);
  this.add(this.iluminacionr);  
  this.add(this.cuerpo);
  this.add(this.cabezabb8);
