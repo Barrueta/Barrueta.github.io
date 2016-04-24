@@ -1,6 +1,7 @@
 function Sensor(position,direction){
- //this.luz=new THREE.SpotLight(0xffffff);
- //this.luz.position
+ spotLight = new THREE.SpotLight(0xF8D898);
+ spotLight.position.x = Sensor.position.x;
+ spotLight.position.y = Sensor.position.y;
  THREE.Raycaster.call(this,position,direction);
  this.colision=false;
 }
@@ -82,9 +83,7 @@ Environment.prototype.setMap=function(map){
 BB8.prototype.sense=function(environment){
  
  this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
- spotLight = new THREE.SpotLight(0xF8D898);
- spotLight.position.x = sensor.position.x;
- spotLight.position.y = sensor.position.y;
+
  
  var obstaculo = this.sensor.intersectObjects(environment.children,true);
  if ((obstaculo.length>0&&(obstaculo[0].distance<=1)))
