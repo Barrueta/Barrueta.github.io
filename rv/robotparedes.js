@@ -83,7 +83,7 @@ Environment.prototype.setMap=function(map){
 BB8.prototype.sense=function(environment){
  
  this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
- ilumniacionr=new THREE.SpotLight(0xffffff));
+ ilumniacionr=new THREE.SpotLight(0xffffff);
  this.add.iluminacionr; 
  
  var obstaculo = this.sensor.intersectObjects(environment.children,true);
