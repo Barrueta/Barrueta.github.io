@@ -83,8 +83,8 @@ Environment.prototype.setMap=function(map){
 BB8.prototype.sense=function(environment){
  
  this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
- iluminacionr=new THREE.SpotLight(0xffffff);
- this.add.iluminacionr; 
+ this.add(new THREE.SpotLight(0xffffff));
+
  
  var obstaculo = this.sensor.intersectObjects(environment.children,true);
  if ((obstaculo.length>0&&(obstaculo[0].distance<=1)))
@@ -177,9 +177,6 @@ function setup(){
  iluminacion = new THREE.PointLight(0xffffff);
  iluminacion.position.z=20;
  iluminacion.position.y=10;
- //spotLight = new THREE.SpotLight(0xffffff);
- //spotLight.position.x = Sensor.position;
- //spotLight.direction = Sensor.direction;
  camara=new THREE.PerspectiveCamera();
  camara.position.z=40;
  renderer = new THREE.WebGLRenderer();
