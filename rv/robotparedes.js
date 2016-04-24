@@ -26,8 +26,8 @@ function BB8Cabeza(){
  this.add(this.cuello);  
  this.iluminacionr = new THREE.SpotLight(0xffffff);
  this.add(this.iluminacionr);
- this.iluminacionr.position.x=-1;
-
+ this.iluminacionr.position.x=Math.PI/2;
+ this.iluminacionr.position.y=Math.PI+0.5;
  
 }
 
@@ -50,6 +50,7 @@ function BB8(x=0, y=0){
  
  this.cuerpo.rotation.x=Math.PI/2;
  this.cabezabb8.rotation.x=Math.PI/2;
+ 
  this.cabezabb8.rotation.y=Math.PI+0.5;
  this.cuerpo.scale.x=0.5;
  this.cuerpo.scale.y=0.5;
