@@ -1,5 +1,4 @@
 function Sensor(position,direction){
-
  THREE.Raycaster.call(this,position,direction);
  this.colision=false;
 }
@@ -175,8 +174,8 @@ function setup(){
  iluminacion.position.z=20;
  iluminacion.position.y=10;
  spotLight = new THREE.SpotLight(0xffffff);
- spotLight.position.x = Sensor.position.y;
- spotLight.position.y = Sensor.position.z;
+ spotLight.position.x = Sensor.position;
+ spotLight.direction = Sensor.direction;
  camara=new THREE.PerspectiveCamera();
  camara.position.z=40;
  renderer = new THREE.WebGLRenderer();
