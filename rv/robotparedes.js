@@ -1,7 +1,5 @@
 function Sensor(position,direction){
  THREE.Raycaster.call(this,position,direction);
- iluminacionr=new THREE.SpotLight(0xffffff);
- iluminacionr.position=Sensor.position;
   this.colision=false;
 }
 Sensor.prototype=new THREE.Raycaster();
