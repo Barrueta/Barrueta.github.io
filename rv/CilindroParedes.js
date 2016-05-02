@@ -18,8 +18,8 @@ pared3.position.y=10;
 pared4.position.y=-10;
 luz=new THREE.SpotLight(0xffffff);
 luzPuntual=new THREE.PointLight(0xffffff);
-luzPuntual.position.x=0;
-luzPuntual.position.y=0;
+luzPuntual.position.x=5;
+luzPuntual.position.y=5;
 luzPuntual.position.z=20;
 luz.position.x=0;
 luz.position.y=0;
@@ -55,6 +55,7 @@ pared1.receiveShadow=true;
 pared2receiveShadow=true;
 pared3.receiveShadow=true;
 pared4.receiveShadow=true;
+floor.receiveShadow=true;
 luz.castShadow=true;
 
 }
