@@ -20,7 +20,7 @@ document.body.appendChild(renderer.domElement);
 }
 function loop()
 {
-  requestAnimationFrame(render);
+  requestAnimationFrame(loop);
   renderer.render(escena,camara);
 }
 
