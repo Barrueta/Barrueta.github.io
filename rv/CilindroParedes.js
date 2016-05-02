@@ -18,9 +18,9 @@ pared3.position.y=10;
 pared4.position.y=-10;
 luz=new THREE.SpotLight(0xffffff);
 luzPuntual=new THREE.PointLight(0xffffff);
-luzPuntual.position.x=10;
-luzPuntual.position.y=10;
-luzPuntual.position.z=10;
+luzPuntual.position.x=0;
+luzPuntual.position.y=0;
+luzPuntual.position.z=20;
 
 luz.position.x=0;
 luz.position.y=0;
