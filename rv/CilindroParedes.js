@@ -8,6 +8,7 @@ luz.position.x=10;
 luz.position.y=10;
 luz.position.z=10;
 malla=new THREE.Mesh(forma,material);
+malla.material.transparent=true;
 malla.material.opacity=0.5;
 escena=new THREE.Scene();
 escena.add(malla);
