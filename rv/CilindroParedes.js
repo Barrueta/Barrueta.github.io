@@ -32,12 +32,14 @@ malla.material.opacity=0.5;
 malla.rotation.x=Math.PI/2;
 escena=new THREE.Scene();
 escena.add(luzPuntual);
+escena.add(luz);
 escena.add(pared1);
 escena.add(pared2);
 escena.add(pared3);
 escena.add(pared4);
 escena.add(malla);
-escena.add(luz);
+escena.add(floor);
+
 var fov=75;
 var aspect=window.innerWidth/window.innerHeight;
 var near=0.1;
