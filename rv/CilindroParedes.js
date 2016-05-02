@@ -1,7 +1,7 @@
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.TextureLoader().load('./jade_dragon.jpg');
-var forma=new THREE.CylinderGeometry(2.5,2.5,1,50);
+var forma=new THREE.CylinderGeometry(2.5,2.5,4,50);
 var material=new THREE.MeshPhongMaterial({map:textura});
 var pared1 = new THREE.Mesh(new THREE.BoxGeometry(1,20,4), new THREE.MeshNormalMaterial());
 var pared2 = new THREE.Mesh(new THREE.BoxGeometry(1,20,4), new THREE.MeshNormalMaterial());
