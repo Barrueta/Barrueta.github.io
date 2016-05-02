@@ -1,12 +1,12 @@
 function setup(){
 THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.TextureLoader().load('./jade_dragon.jpg');
-var forma=new THREE.CylinderGeometry(2.5,2.5,4,50);
+var forma=new THREE.CylinderGeometry(2.5,2.5,10,50);
 var material=new THREE.MeshPhongMaterial({map:textura});
-var pared1 = new THREE.Mesh(new THREE.BoxGeometry(1,20,4), new THREE.MeshNormalMaterial());
-var pared2 = new THREE.Mesh(new THREE.BoxGeometry(1,20,4), new THREE.MeshNormalMaterial());
-var pared3 = new THREE.Mesh(new THREE.BoxGeometry(21,1,4), new THREE.MeshNormalMaterial());
-var pared4 = new THREE.Mesh(new THREE.BoxGeometry(21,1,4), new THREE.MeshNormalMaterial());
+var pared1 = new THREE.Mesh(new THREE.BoxGeometry(1,20,10), new THREE.MeshNormalMaterial());
+var pared2 = new THREE.Mesh(new THREE.BoxGeometry(1,20,10), new THREE.MeshNormalMaterial());
+var pared3 = new THREE.Mesh(new THREE.BoxGeometry(21,1,10), new THREE.MeshNormalMaterial());
+var pared4 = new THREE.Mesh(new THREE.BoxGeometry(21,1,10), new THREE.MeshNormalMaterial());
 pared1.position.x=10;
 pared2.position.x=-10;
 pared3.position.y=10;
