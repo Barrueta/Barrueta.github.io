@@ -13,6 +13,11 @@ pared2.position.x=-10;
 pared3.position.y=10;
 pared4.position.y=-10;
 luz=new THREE.SpotLight(0xffffff);
+luzPuntual=new THREE PointLight(0xffffff);
+luzPuntual.position.x=10;
+luzPuntual.position.y=10;
+luzPuntual.position.z=10;
+
 luz.position.x=0;
 luz.position.y=0;
 luz.position.z=0;
@@ -22,6 +27,7 @@ malla.material.transparent=true;
 malla.material.opacity=0.5;
 malla.rotation.x=Math.PI/2;
 escena=new THREE.Scene();
+escena.add(luzPuntual);
 escena.add(pared1);
 escena.add(pared2);
 escena.add(pared3);
@@ -54,7 +60,7 @@ function loop()
   renderer.render(escena,camara);
 }
 
-var malla,escena,camara,renderer,luz;
+var malla,escena,camara,renderer,luz,luzPuntual;
 setup();
 loop();
 
