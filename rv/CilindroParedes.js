@@ -29,7 +29,7 @@ document.body.appendChild(renderer.domElement);
 function loop()
 {
   requestAnimationFrame(loop);
-  malla.rotation.y+=0.5;
+  malla.rotation.y+=0.3;
   renderer.render(escena,camara);
 }
 
