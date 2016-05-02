@@ -2,7 +2,7 @@ function setup(){
 THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.TextureLoader().load('./jade_dragon.jpg');
 var forma=new THREE.CylinderGeometry(1,1,5,50);
-var material=new THREE.MeshPhonghMaterial({map:textura});
+var material=new THREE.MeshPhongMaterial({map:textura});
 malla=new THREE.Mesh(forma,material);
 escena=new THREE.Scene();
 escena.add(malla);
