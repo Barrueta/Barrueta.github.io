@@ -26,7 +26,6 @@ escena.add(pared3);
 escena.add(pared4);
 escena.add(malla);
 escena.add(luz);
-
 var fov=75;
 var aspect=window.innerWidth/window.innerHeight;
 var near=0.1;
@@ -37,7 +36,13 @@ camara.position.z=20;
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight);
 document.body.appendChild(renderer.domElement);
-
+renderer.shadowMap.enabled=true;
+malla.castShadow=true;
+pared1.receiveShadow=true;
+pared2receiveShadow=true;
+pared3.receiveShadow=true;
+pared4.receiveShadow=true;
+luz.castShadow=true;
 
 }
 function loop()
