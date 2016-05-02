@@ -8,7 +8,7 @@ var pared2 = new THREE.Mesh(new THREE.BoxGeometry(1,20,10), new THREE.MeshPhongM
 var pared3 = new THREE.Mesh(new THREE.BoxGeometry(21,1,10), new THREE.MeshPhongMaterial({color:'#ffffff'}));
 var pared4 = new THREE.Mesh(new THREE.BoxGeometry(21,1,10), new THREE.MeshPhongMaterial({color:'#ffffff'}));
 var floor=new THREE.Mesh(new THREE.BoxGeometry(20,20,0.1), new THREE.MeshLambertMaterial({color:0x00ff00}));
-floor.position.z=-10;
+floor.position.z=-5;
 floor.position.x=0;
 floor.position.y=0;
 
@@ -21,7 +21,6 @@ luzPuntual=new THREE.PointLight(0xffffff);
 luzPuntual.position.x=0;
 luzPuntual.position.y=0;
 luzPuntual.position.z=20;
-
 luz.position.x=0;
 luz.position.y=0;
 luz.position.z=0;
