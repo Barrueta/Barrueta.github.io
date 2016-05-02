@@ -25,6 +25,7 @@ function loop()
 }
 
 var malla,escena,camara,renderer;
-loop();
 setup();
+loop();
+
 
