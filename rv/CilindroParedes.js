@@ -5,7 +5,7 @@ var forma=new THREE.CylinderGeometry(1,1,5,50);
 var material=new THREE.MeshPhongMaterial({map:textura});
 luz=new THREE.SpotLight(0xffffff);
 malla=new THREE.Mesh(forma,material);
-malla.Material().opacity=0.5;
+malla.Material.opacity=0.5;
 escena=new THREE.Scene();
 escena.add(malla);
 escena.add(luz);
