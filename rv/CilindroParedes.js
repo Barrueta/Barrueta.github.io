@@ -18,6 +18,7 @@ luz.position.z=10;
 malla=new THREE.Mesh(forma,material);
 malla.material.transparent=true;
 malla.material.opacity=0.5;
+malla.rotation.x=Math.PI/2;
 escena=new THREE.Scene();
 escena.add(pared1);
 escena.add(pared2);
