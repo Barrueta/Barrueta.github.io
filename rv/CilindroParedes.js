@@ -7,6 +7,7 @@ var pared1 = new THREE.Mesh(new THREE.BoxGeometry(1,20,10), new THREE.MeshPhongM
 var pared2 = new THREE.Mesh(new THREE.BoxGeometry(1,20,10), new THREE.MeshPhongMaterial({color:'#ffffff'}));
 var pared3 = new THREE.Mesh(new THREE.BoxGeometry(21,1,10), new THREE.MeshPhongMaterial({color:'#ffffff'}));
 var pared4 = new THREE.Mesh(new THREE.BoxGeometry(21,1,10), new THREE.MeshPhongMaterial({color:'#ffffff'}));
+
 pared1.position.x=10;
 pared2.position.x=-10;
 pared3.position.y=10;
@@ -15,6 +16,7 @@ luz=new THREE.SpotLight(0xffffff);
 luz.position.x=0;
 luz.position.y=0;
 luz.position.z=0;
+luz.rotation.y=Math.PI/2;
 malla=new THREE.Mesh(forma,material);
 malla.material.transparent=true;
 malla.material.opacity=0.5;
