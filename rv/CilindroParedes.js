@@ -3,9 +3,11 @@ THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.TextureLoader().load('./jade_dragon.jpg');
 var forma=new THREE.CylinderGeometry(1,1,5,50);
 var material=new THREE.MeshPhongMaterial({map:textura});
+luz=New THREE.SpotLight(0xffffff);
 malla=new THREE.Mesh(forma,material);
 escena=new THREE.Scene();
 escena.add(malla);
+escena.add(luz);
 
 var fov=75;
 var aspect=window.innerWidth/window.innerHeight;
@@ -26,7 +28,7 @@ function loop()
   renderer.render(escena,camara);
 }
 
-var malla,escena,camara,renderer;
+var malla,escena,camara,renderer,luz;
 setup();
 loop();
 
