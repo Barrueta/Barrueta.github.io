@@ -204,10 +204,6 @@ function onDocumentKeyDown(event){
  var keyCode=event.which;
  if (keyCode==80)
  camara=new THREE.OrthographicCamera();
- 
- 
-}
-
 }
 function loop(){
  requestAnimationFrame(loop);
