@@ -179,7 +179,9 @@ function setup(){
 
  entorno=new Environment();
  entorno.setMap(mapa);
- var floor=new THREE.Mesh(new THREE.BoxGeometry(28,30,0.1), new THREE.MeshLambertMaterial({color:0x00ff00}));
+ var floor=new THREE.Mesh(new THREE.BoxGeometry(28,30,0.1);
+ var texturafloor = new THREE.TextureLoader().load('http://Barrueta.github.io/rv/PISO.jpg');
+ 
  floor.position.z=-0.5;
  floor.position.x=-1.5;
  floor.position.y=0.5;
