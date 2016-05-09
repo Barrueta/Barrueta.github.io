@@ -202,7 +202,7 @@ function setup(){
 }
 function onDocumentKeyDown(event){
  var keyCode=event.which;
- if keyCode==80;
+ if (keyCode==80)
  camara=new THREE.OrthographicCamera();
  
  
