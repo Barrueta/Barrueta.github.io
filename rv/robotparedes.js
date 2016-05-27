@@ -135,7 +135,7 @@ BB8.prototype.operations.RotarIzquierda = function(robot,angulo){
  
 function setup(){
  var mapa = new Array();
-  mapa[0] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+  mapa[0] = "xxxxxxxxxxxxxxxxxxxxxxxxxx  x";
   mapa[1] = "x            x       x      x";
   mapa[2] = "x            x       x      x";
   mapa[3] = "x  xxxxxxxxxxx  x  xxx      x";
