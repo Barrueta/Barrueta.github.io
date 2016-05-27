@@ -141,13 +141,13 @@ function setup(){
   mapa[3] = "x  xxxxxxxxxxx  x           ";
   mapa[4] = "x               x           ";
   mapa[5] = "x               x           ";
-  mapa[6] = "      xxxxxxxxxxx           ";
+  mapa[6] = "x     xxxxxxxxxxx           ";
   mapa[7] = "xxxx  x                     ";
   mapa[8] = "   x  x                     ";
   mapa[9] = "   x  xxxxxxx               ";
  mapa[10] = "   x        x               ";
  mapa[11] = "x  x        x                 x";
- mapa[12] = "x  x    x x x                   x";
+ mapa[12] = "x  x    xxxxx                   x";
  mapa[13] = "x  x    x                    x";
  mapa[14] = "x     xxx                    x";
  mapa[15] = "x     x                   x";
