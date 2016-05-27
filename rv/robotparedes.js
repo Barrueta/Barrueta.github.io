@@ -142,7 +142,7 @@ function setup(){
   mapa[4] = "x               x  x        x";
   mapa[5] = "x               x  x        x";
   mapa[6] = "x     xxxxxxxxxxx  xxxx       x";
-  mapa[7] = "xxxx  x            x  x     x";
+  mapa[7] = "xxxx  x               x     x";
   mapa[8] = "   x  x               x     x";
   mapa[9] = "   x  xxxxxxxxxxxx    x     x";
  mapa[10] = "   x        x         x     x";
@@ -150,8 +150,8 @@ function setup(){
  mapa[12] = "x  x    xxxxx         xxxx  x";
  mapa[13] = "x  x    x             x  x  x";
  mapa[14] = "x     xxx             x  x  x";
- mapa[15] = "x     x               x     x";
- mapa[16] = "xxxxxxx     x  xxxxxxxx     x";
+ mapa[15] = "x     x     x  xxxxxxxx     x";
+ mapa[16] = "xxxxxxx     x               x";
  mapa[17] = "x        x  x               x";
  mapa[18] = "x        x  x               x";
  mapa[19] = "x   xxxxxxxxxx              x";
