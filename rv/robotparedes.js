@@ -137,8 +137,8 @@ function setup(){
  var mapa = new Array();
   mapa[0] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
   mapa[1] = "x            x       x      x";
-  mapa[2] = "x            x     xxx      x";
-  mapa[3] = "x  xxxxxxxxxxx  x  x        x";
+  mapa[2] = "x            x       x      x";
+  mapa[3] = "x  xxxxxxxxxxx  x  xxx      x";
   mapa[4] = "x               x  x        x";
   mapa[5] = "x               x  x        x";
   mapa[6] = "x     xxxxxxxxxxx  x        x";
