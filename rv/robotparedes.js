@@ -153,18 +153,18 @@ function setup(){
  mapa[15] = "x     x     x  xxxxxxxx     x";
  mapa[16] = "xxxxxxx     x               x";
  mapa[17] = "x        x  x               x";
- mapa[18] = "x        x  x               x";
- mapa[19] = "x   xxxxxxxxxx              x";
- mapa[20] = "x   x  r                    x";
- mapa[21] = "x   x                        x";
- mapa[22] = "x   x   x                    x";
- mapa[23] = "x   xxxxx                   x";
- mapa[24] = "x   x                       x";
- mapa[25] = "x   x                    xxxx";
- mapa[26] = "xxxxxxxxxxxxx               x";
+ mapa[18] = "x        x  x  xxxxxxx      x";
+ mapa[19] = "x   xxxxxxxxxx       x      x";
+ mapa[20] = "x   x  r             x      x";
+ mapa[21] = "x   x                x      x";
+ mapa[22] = "x   x   x        xxxxx      x";
+ mapa[23] = "x   xxxxx        x          x";
+ mapa[24] = "x   x            xxxxx      x";
+ mapa[25] = "x   x                       x";
+ mapa[26] = "xxxxxxxxxxxxx           xxxxx";
  mapa[27] = "x                           x";
  mapa[28] = "x                           x";
- mapa[29] = "x                           x";
+ mapa[29] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
 
  entorno=new Environment();
